@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,300;1,600&display=swap');
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.section{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.section .card-cover{
+    position: relative;
+    width: 300px;
+    height: 450px;
+}
+.cardbody{
+    width: 100%;
+    height: 100%;
+    background-color: #202020;
+    border-radius: 10px;
+    transition: 0.5s ease;
+}
+.cardbody .card-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cardbody .card-img img{
+    width: 284px;
+    background: none;
+    border: none;
+    margin-top: -43px;
+    animation: animate 3s infinite linear;
+}
+.cardbody .card-text{
+    height: 175px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 11px 10px 0px 10px;
+}
+.card-text h1{
+    font-family: 'Rubik', sans-serif;
+    font-size: 2em !important;
+    font-weight: 600;
+}
+.card-text h1 span{
+    color: #dd5835;
+}
+.card-text p{
+    font-family: 'Rubik', sans-serif;
+    line-height: 1.2;
+}
+.card-text ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding: 0 !important;
+    margin: 0 !important;
+    z-index: 2;
+}
+.card-text ul li{
+    display: inline;
+    padding: 0px 16px;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+.card-text ul li:hover{
+    color: #dd5835;
+}
+.section .card-cover input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 450px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+input[type=checkbox]:checked ~ .cardbody {
+    background-color: #fff;
+    color: #202020;
+    border: 1px solid #dd5835;
+  }
+input[type=checkbox]:checked ~ .cardbody .card-text {
+    color: #202020;
+  }
+
+@keyframes animate {
+    0%{
+        position: relative;
+        transform: translate(0px);
+    }
+    50%{
+        position: relative;
+        transform: translate(6px);
+    }
+    100%{
+        position: relative;
+        transform: translate(0px);
+    }
+    
+}
